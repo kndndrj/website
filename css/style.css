@@ -1,3 +1,8 @@
+html {
+    scroll-behavior:smooth;
+    scroll-padding-top:80px;
+}
+
 body{
     background-color:#f4f4f4;
     color:#555;
@@ -16,7 +21,11 @@ header{
     position:fixed;
 }
 
-img{
+img {
+    margin:20px;
+}
+
+.center-img img{
     border-radius:100%;
     border:10px solid #18815f;
 }
@@ -49,7 +58,7 @@ header a, header a:hover{
     text-decoration-color:#18815f;
 }
 
-.headerButton {
+.header-button {
     font-size:small;
     float:right;
     padding:3px;
@@ -89,13 +98,17 @@ header a, header a:hover{
     overflow:hidden;
 }
 
-#paragraph{
+.paragraph{
     float:left;
     width:100%;
     box-sizing: border-box;
 }
 
-#paragraph h1{
+.paragraph h1{
     border-top-right-radius:5px;
     border-bottom-right-radius:5px;
+}
+
+.paragraph p{
+    text-align: justify;
 }
