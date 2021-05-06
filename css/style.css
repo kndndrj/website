@@ -1,11 +1,26 @@
+/* #################### */
+/* Presets              */
+/* #################### */
+:root {
+    --color-primary: #8bbaed;
+    --color-secondary: #b8c3d1;
+    --color-text-primary: #555555;
+    --color-text-secondary: #ffffff;
+    --color-background-light: #f4f4f4;
+    --color-background-dark: #333333;
+}
+
+/* #################### */
+/* Main Elements        */
+/* #################### */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #555;
+    background-color: var(--color-background-light);
+    color: var(--color-text-primary);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6em;
@@ -14,109 +29,140 @@ body {
 
 header {
     width: 100%;
-    height: 70px;
+    height: 53;
     text-overflow: hidden;
-    background-color: #333333;
-    color: #fff;
+    background-color: var(--color-background-dark);
+    color: var(--color-text-secondary);
     position: fixed;
 }
 
-img {
-    margin: 20px;
+main {
+    margin: auto;
+    max-width: 900px;
+    border-left: 6px solid var(--color-primary);
+    padding-top: 50px;
 }
 
-.center-img img {
-    border-radius: 100%;
-    border: 10px solid #18815f;
+.container {
+    overflow: hidden;
+    padding-right: 5px;
 }
 
-section h1 {
+.container h2 {
     text-decoration: none;
-    color: #f4f4f4;
-    background-color: #333;
-    border-left: 6px solid #18815f;
+    color: var(--color-background-light);
+    background-color: var(--color-background-dark);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     padding: 4px;
     padding-bottom: 10px;
 }
 
+.paragraph {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* #################### */
+/* Link Buttons         */
+/* #################### */
+
 a {
     padding: 8px;
     text-decoration: none;
-    background-color: #18815f;
-    color: #f4f4f4;
+    background-color: var(--color-primary);
+    color: var(--color-background-light);
     border-radius: 5px;
 }
 
 a:hover {
-    background-color: #5aaa91;
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
 }
 
+/* #################### */
+/* Header               */
+/* #################### */
 header a, header a:hover {
     color: inherit;
     background-color: inherit;
-    text-decoration: underline;
-    text-decoration-color: #18815f;
 }
 
-.header-button {
-    font-size: small;
-    float: right;
-    padding: 3px;
+.nav-bar a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 0px;
 }
 
-.contacts a {
-    position: relative;
-    top: -60px;
-    float: right;
-    margin: 3px;
-    padding: 5px 5px;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    background-color: #fff;
-    background-image: url('../icons/GitHub-Mark-120px-plus.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-origin: content-box;
+.nav-bar a:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
 }
 
-.contacts a:hover {
-    background-color:#ccc;
+.nav-bar a.active {
+    background-color: var(--color-primary);
 }
 
-.center {
-    margin: auto;
-}
-
-.center-img {
-    margin: auto;
-    width: 520px;
-    padding: 10px;
-    vertical-align: middle;
-}
-
-.center-img h4 {
-    margin-left: 90px;
-}
-
-.container {
+.nav-bar {
     max-width: 900px;
     margin: auto;
-    overflow: hidden;
 }
 
-.paragraph {
-    float: left;
-    width: 100%;
-    box-sizing: border-box;
+/* #################### */
+/* Code Blocks          */
+/* #################### */
+pre {
+    height: 202px;
+    padding-bottom: 40px;
 }
 
-.paragraph h1 {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+pre code {
+    background-color: var(--color-text-secondary);
+    border: 1px solid var(--color-text-primary);
+    display: block;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-.paragraph p {
-    text-align: justify;
+/* #################### */
+/* Specifics            */
+/* #################### */
+.heading-button {
+    font-size: 17px;
+    float: right;
+    padding: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.head {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.head img {
+    border: 3px solid var(--color-primary);
+    border-radius: 5%;
+}
+
+.right-img {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+}
+
+/* #################### */
+/* Type Styles          */
+/* #################### */
+@media (min-width: 55em) {
+    .right-img {
+        display: block;
+        float: right;
+        clear: both;
+        width: 400px;
+        margin-left: 20px;
+    }
 }

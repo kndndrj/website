@@ -3,55 +3,58 @@
 <head>
     <title>Andrej Kenda</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/3e08bca183.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/svg" href="./icons/favicon.svg"/>
     <meta name="yandex-verification" content="7a3749aa2771d732" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header>
-    	<div class="container contacts">
-    	    <h1>Andrej Kenda</h1>
-            <a href="https://github.com/Kndndrj"></a>
-    	</div>
-    </header>
-    <br>
-    <br>
-    <br>
-    <div class="container center-img">
-        <img src="https://avatars1.githubusercontent.com/u/61655264?s=460&u=90b4534ca33b1304b1fadd16614f8954d29ad33a&v=4">
-        <h4>DIPLOMIRANI INŽENIR STROJNIŠTVA (VS) <a href="https://repozitorij.uni-lj.si/IzpisGradiva.php?id=109420&lang=slv">...</a></h4>
-    </div>
-    <div class="container center">
-        <section class="paragraph">
-            <h1>Dejavnosti</h1>
-                <list>
-                    <li>Programiranje</li>
-                    <li>3D modeliranje</li>
-                    <li>Načrtovanje vezij</li>
-                </list>
-        </section>
-        <section class="paragraph">
-            <h1>Projekti <a class="header-button" href="projects.html">Vsi projekti</a></h1>
-            <list>
-                <li>
-                    <b>3D tiskalnik<a class="header-button" href="projects.html#3dprinter">Več</a></b>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis magni sint eveniet tenetur, repellendus error.</p>
-                </li>
-                <li>
-                    <b>Miška<a class="header-button" href="projects.html#mouse">Več</a></b>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis magni sint eveniet tenetur, repellendus error.</p>
-                </li>
-            </list>
-        </section>
-        <section class="paragraph">
-            <h1>Opis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </section>
+        <div class="container nav-bar">
+            <b><a class="active" href=""><i class="fas fa-home"></i> Domača stran</a></b>
+            <b><a href="projects.html"><i class="fas fa-hammer"></i> Projekti</a></b>
+            <b><a href="https://github.com/Kndndrj" target="_blank"><i class="fab fa-github"></i> GitHub</a></b>
         </div>
-    
+    </header>
+    <main>
+        <div class="container head">
+            <img class="right-img" src="https://avatars1.githubusercontent.com/u/61655264?s=460&u=90b4534ca33b1304b1fadd16614f8954d29ad33a&v=4">
+            <br><br><br><br>
+            <h1>Andrej Kenda</h1>
+            <h4><a href="https://repozitorij.uni-lj.si/IzpisGradiva.php?id=109420&lang=slv" target="_blank"><i class="fas fa-graduation-cap"></i> Diplomirani inženir strojništva (VS)</a></h4>
+        </div>
+        <div class="container">
+            <h2>Zanimanja</h2>
+            <section class="paragraph">
+                    <list>
+                        <li>Programiranje</li>
+                        <li>3D modeliranje</li>
+                        <li>Načrtovanje vezij</li>
+                    </list>
+            </section>
+            <h2>Projekti<a class="heading-button" href="projects.html"><i class="fas fa-hammer"></i> Vsi projekti</a></h2>
+            <section class="paragraph">
+                <list>
+                    <li>
+                        <b>3D tiskalnik<a class="heading-button" href="projects.html#3dprinter"><i class="fas fa-info"></i> Več</a></b>
+                        <p>3D tiskalnik na principu IDEX postavitve - dve glavi na X-osi.</p>
+                    </li>
+                    <li>
+                        <b>Ducke<a class="heading-button" href="projects.html#ducke"><i class="fas fa-info"></i> Več</a></b>
+                        <p>Igrica, izdelana s programskim jezikom "Lua", ki se izvaja v vsakem UNIX terminalu.</p>
+                    </li>
+                </list>
+            </section>
+            <h2>Opis</h2>
+            <section class="paragraph">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
