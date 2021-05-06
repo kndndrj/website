@@ -41,6 +41,17 @@ main {
     max-width: 900px;
     border-left: 6px solid var(--color-primary);
     padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+footer {
+    text-overflow: hidden;
+    background-color: var(--color-background-dark);
+    color: var(--color-text-secondary);
+    position: static;
+    bottom: 0;
+    padding-top: 10px;
+    min-height: 50px;
 }
 
 .container {
