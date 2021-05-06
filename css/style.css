@@ -114,15 +114,14 @@ header a, header a:hover {
 /* #################### */
 /* Code Blocks          */
 /* #################### */
-pre {
-    height: 202px;
-    padding-bottom: 40px;
-}
 
-pre code {
+code {
     background-color: var(--color-text-secondary);
     border: 1px solid var(--color-text-primary);
     display: block;
+}
+
+pre {
     padding-left: 40px;
     padding-right: 40px;
 }
