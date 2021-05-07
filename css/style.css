@@ -129,7 +129,6 @@ header a, header a:hover {
 
 code {
     background-color: var(--color-text-secondary);
-    border: 1px solid var(--color-text-primary);
     display: block;
 }
 
@@ -164,6 +163,7 @@ pre {
     display: block;
     margin: auto;
     max-width: 95%;
+    border: 1px solid var(--color-text-primary);
 }
 
 /* #################### */
