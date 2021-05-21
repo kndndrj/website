@@ -4,6 +4,7 @@
     <title>Andrej Kenda</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://kit.fontawesome.com/3e08bca183.js" crossorigin="anonymous"></script>
+    <script src="./scripts.js"></script>
     <link rel="icon" type="image/svg" href="./images/favicon.svg"/>
     <meta name="yandex-verification" content="7a3749aa2771d732" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +19,7 @@
         </div>
     </header>
     <main>
+        <!-- Head block -->
         <div class="container head">
             <img class="side-img right-img" src="https://avatars1.githubusercontent.com/u/61655264?s=460&u=90b4534ca33b1304b1fadd16614f8954d29ad33a&v=4" alt="Andrej" title="Andrej">
             <h1>Andrej Kenda</h1>
@@ -26,7 +28,20 @@
             <h4><a href=""><i class="fas fa-graduation-cap"></i> Študent 2. st. mehatronike UL FE</a></h4>
             <br>
             <h4><a href="mailto:andrej@kenda.one"><i class="fas fa-envelope"></i> Kontakt</a></h4>
+            <h4><a onclick="openPopup('.popup'); openPopup('.popup-cover')" style="cursor: pointer;"><i class="fab fa-monero"></i> XMR</a></h4>
         </div>
+
+        <!-- Popup -->
+        <div class="popup">
+            <img src="./images/monero_address.png" alt="Monero Address" title="Monero Address">
+            <h4>XMR public address</h4>
+            <p style="word-wrap: break-word;">4AhUWju5fQUhGQPG3GSkGKcmRb4UghJWLbtHzbZyqzzNJS6vXNJNV69UKkmvcaac2sLoSdL3V3W2y3k6AJy398WKHgpo1fo</p>
+            <h4><a onclick="openPopup('.popup'); openPopup('.popup-cover')" style="cursor: pointer;"><i class="fas fa-window-close"></i> Zapri</a></h4>
+        </div>
+        <div class="popup-cover">
+        </div>
+
+        <!-- Containers -->
         <div class="container">
             <h2>Zanimanja</h2>
             <section class="paragraph">
@@ -63,4 +78,7 @@
     <footer>
     </footer>
 </body>
+
+
+<!--Scripts to include-->
 </html>
