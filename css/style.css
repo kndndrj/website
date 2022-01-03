@@ -10,6 +10,10 @@
     --color-background-dark: #333333;
 }
 
+h2[id]:target {
+   background-color: var(--color-secondary);
+}
+
 /* #################### */
 /* Main Elements        */
 /* #################### */
@@ -39,9 +43,10 @@ header {
 main {
     margin: auto;
     max-width: 900px;
-    border-left: 6px solid var(--color-primary);
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 footer {
@@ -56,15 +61,13 @@ footer {
 
 .container {
     overflow: hidden;
-    padding-right: 5px;
 }
 
 .container h2 {
     text-decoration: none;
     color: var(--color-background-light);
     background-color: var(--color-background-dark);
-    border-top-right-radius: 9px;
-    border-bottom-right-radius: 9px;
+    border-radius: 9px;
     padding: 4px;
     padding-bottom: 10px;
     padding-left: 8px;
@@ -159,17 +162,51 @@ header a, header a:hover {
 /* #################### */
 /* Code Blocks          */
 /* #################### */
-
 code {
-    background-color: var(--color-text-secondary);
     display: block;
 }
 
 pre {
+    margin: 0px;
     overflow:auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: var(--color-text-secondary)
 }
+
+/* #################### */
+/* Effects              */
+/* #################### */
+.typewriter {
+  width: max-content;
+  display: inline-block;
+}
+
+.typewriter h1 {
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+  border-right: 3px solid var(--color-text-primary);
+  white-space: nowrap;
+  margin: 0 auto;
+  margin-left: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  animation: 
+    typing 1.25s steps(12, end),
+    .75s blink-caret 1.6s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: inherit; }
+}
+
 
 /* #################### */
 /* Specifics            */
@@ -184,19 +221,42 @@ pre {
 
 .head {
     text-align: center;
-    padding-top: 20px;
+    margin-top: 20px;
+    border: 0px solid;
+    background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary));
+    border-radius: 20px;
+    padding-right: 0;
+}
+
+.head a {
+    padding: 8px;
+    text-decoration: none;
+    background-color: var(--color-background-light);
+    color: var(--color-primary);
+    border-radius: 5px;
+}
+ 
+.head a:hover {
+    background-color: inherit;
+    color: inherit
 }
 
 .head img {
-    border: 3px solid var(--color-primary);
-    border-radius: 5%;
+    border: 0px solid;
+    border-radius: 17px;
+}
+
+.paragraph img {
+    border: 0px solid;
+    border-radius: 10px;
 }
 
 .side-img {
     display: block;
     margin: auto;
     max-width: 95%;
-    border: 1px solid var(--color-text-primary);
+    margin-top: 2.5%;
+    background-color: var(--color-background-light)
 }
 
 /* #################### */
@@ -207,8 +267,7 @@ pre {
         display: block;
         clear: both;
         width: 400px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 5px;
     }
     .right-img {
         float: right;
