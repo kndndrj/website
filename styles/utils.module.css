@@ -1,0 +1,83 @@
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0;
+}
+
+.mainSection {
+  margin: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.headingTitle {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingSubtitle {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.headingParagraphTitle {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.headingDescription {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  margin: 0 0 1.25rem;
+}
+
+.sideImg {
+  margin: auto;
+  display: inline-block;
+  margin: 6px 6px 0px 6px;
+}
+
+.markdown img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+
+@media (min-width: 900px) {
+  .sideImg {
+    display: block;
+    clear: both;
+  }
+  .leftImg {
+    float: left;
+  }
+  .rightImg {
+    float: right;
+  }
+  .markdown img {
+    float: left;
+    clear: both;
+    max-width: 350px;
+    margin: 6px 20px 0px 6px;
+  }
+}

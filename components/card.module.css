@@ -1,0 +1,28 @@
+.card {
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-primary);
+  border: 0px solid;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.image {
+  border-radius: 17px;
+}
+
+.card li {
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 5px;
+  display: inline-flex;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .card li {
+    width: 50%;
+    margin: 0;
+    justify-content: left;
+  }
+}
