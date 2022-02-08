@@ -21,8 +21,8 @@ export default function Card({ name }) {
         <Image
           className={styles.image}
           src="/images/profile.jpg"
-          height={400}
-          width={400}
+          height={350}
+          width={350}
           alt={name}
         />
       </div>
