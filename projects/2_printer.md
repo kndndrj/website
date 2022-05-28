@@ -4,7 +4,7 @@ description: "3D tiskalnik na principu IDEX postavitve - dve glavi na X-osi."
 url: "https://github.com/kndndrj"
 ---
 
-![3D printer](/images/3d_printer_render.png)
+![3D printer](/images/3d_printer_render.jpg)
 
 3D tiskalnik z dvema glavama na X-osi. Cilj je bil izdelati tiskalnik s čim
 cenejšimi komponentami, dostopnimi po vsem svetu. Zato je veliko manjših delov

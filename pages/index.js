@@ -20,14 +20,16 @@ export default function Home({ allProjectData }) {
         <section className={utilStyles.headingDescription}>
           <h2 className={utilStyles.headingSubtitle}>Zanimanja</h2>
           <ul>
+            <li>Linux</li>
+            <li>Shell skripte</li>
+            <li>Embedded sistemi</li>
+            <li>IaC</li>
+            <li>Porazdeljeni sistemi</li>
             <li>3D modeliranje</li>
             <li>3D tisk</li>
             <li>Načrtovanje vezij</li>
             <li>Libre software</li>
             <li>Custom tipkovnice</li>
-            <li>Linux</li>
-            <li>Shell skripte</li>
-            <li>Embedded sistemi</li>
           </ul>
         </section>
         {allProjectData.length != 0 && (

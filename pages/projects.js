@@ -20,7 +20,7 @@ export default function Projects({ contents }) {
             <small className={utilStyles.lightText}>
               <A href={url} blank><FontAwesomeIcon icon={["fab", "github"]} />Git</A>
             </small>
-            <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+            <div className={utilStyles.markdownHtmlContents} dangerouslySetInnerHTML={{ __html: contentHtml }} />
           </article>
         ))}
       </section>
