@@ -1,10 +1,10 @@
 ---
-title: "Arch Baby"
+title: "Baby Arch"
 description: "Preprost aktivnostni lok za dojenčke. "
-url: "https://github.com/kndndrj/arch-baby"
+url: "https://github.com/kndndrj/baby-arch"
 ---
 
-![Baby Arch](https://raw.githubusercontent.com/kndndrj/arch-baby/master/images/baby_arch.jpg)
+![Baby Arch](https://raw.githubusercontent.com/kndndrj/baby-arch/master/images/baby_arch.jpg)
 
 Zelo preprost aktivnostni lok za dojenčke izdelan iz nekaj kosov lesa. Lahko ga
 hitro razstavimo z odvitjem dveh matic - brez orodja! Lok je zelo hitro izdelan
