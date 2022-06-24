@@ -1,11 +1,11 @@
-import Head from "next/head"
-import Layout from "../components/layout"
-import utilStyles from "../styles/utils.module.css"
-import { getPinnedProjectData } from "../lib/projects"
-import Card from "../components/card"
-import Showcase from "../components/showcase"
-import A from "../components/a"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Head from "next/head";
+import Layout from "../components/layout";
+import utilStyles from "../styles/utils.module.css";
+import { getPinnedProjectData } from "../lib/projects";
+import Card from "../components/card";
+import Showcase from "../components/showcase";
+import A from "../components/a";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home({ allProjectData }) {
   return (
@@ -32,6 +32,17 @@ export default function Home({ allProjectData }) {
             <li>Custom tipkovnice</li>
           </ul>
         </section>
+        <section className={utilStyles.headingDescription}>
+          <h2 className={utilStyles.headingSubtitle}>Članki</h2>
+          <ul className={utilStyles.list}>
+            <li className={utilStyles.listItem} key="erk1">
+              <p>Pregled programirljivih logičnih vezij vgrajenih v C2000 družino mikrokrmilnikov (ERK21)  <A href="https://erk.fe.uni-lj.si/2021/papers/kenda(pregled_programirljivih).pdf" blank={true}>Več</A></p>
+            </li>
+            <li className={utilStyles.listItem} key="erk2">
+              <p>Emulacija inkrementalnega dajalnika (ERK21)  <A href="https://erk.fe.uni-lj.si/2021/papers/kenda(emulacija_inkrementalnega).pdf" blank={true}>Več</A></p>
+            </li>
+          </ul>
+        </section>
         {allProjectData.length != 0 && (
           <section className={utilStyles.headingDescription}>
             <h2 className={utilStyles.headingSubtitle}>Projekti</h2>
@@ -52,14 +63,14 @@ export default function Home({ allProjectData }) {
         )}
       </Layout>
     </>
-  )
+  );
 }
 
 export async function getStaticProps() {
-  const allProjectData = getPinnedProjectData()
+  const allProjectData = getPinnedProjectData();
   return {
     props: {
       allProjectData
     }
-  }
+  };
 }
