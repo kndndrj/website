@@ -2,8 +2,6 @@ import styles from "./navbar.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
-import { motion, useCycle } from "framer-motion";
-import { navbarAnimation } from "../lib/transitions";
 import MenuToggle from "./menu_toggle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -19,28 +17,13 @@ function NavButton({ children, href, blank }) {
   return (
     <Link href={href}>
       {blank ? (
-        <motion.a
-          href={href}
-          target="_blank"
-          whileHover={{ x: "-2%" }}
-          transition={{
-            type: "spring",
-            duration: 0.2,
-          }}
-        >
+        <a href={href} target="_blank" rel="noreferrer">
           {children}
-        </motion.a>
+        </a>
       ) : (
-        <motion.a
-          href={href}
-          whileHover={{ x: "-2%" }}
-          transition={{
-            type: "spring",
-            duration: 0.2,
-          }}
-        >
+        <a href={href} >
           {children}
-        </motion.a>
+        </a>
       )}
     </Link>
   );
@@ -48,38 +31,29 @@ function NavButton({ children, href, blank }) {
 
 export default function Navbar() {
   const router = useRouter();
-  const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <motion.nav
-      className={styles.header}
-      initial={false}
-      animate={isOpen ? "open" : "closed"}
-    >
-      <motion.div
-        className={utilStyles.container}
-        variants={navbarAnimation}
-      >
+    <nav className={styles.header}>
+      <div className={utilStyles.container}>
         <div className={styles.navbar}>
           <ul className={styles.list}>
             <li
               className={styles.tab}
               key="burger"
             >
-              <MenuToggle toggle={() => toggleOpen()} />
+              <MenuToggle />
             </li>
             {pages.map((page) => (
               <li
                 className={`${styles.tab} ${page.href === router.route && styles.selected}`}
                 key={page.label}
-                onClick={() => toggleOpen()}
               >
                 <NavButton href={page.href} blank={page.blank}><FontAwesomeIcon icon={page.icon} className={styles.icon} />{page.label}</NavButton>
               </li>
             ))}
           </ul>
         </div>
-      </motion.div>
-    </motion.nav>
+      </div>
+    </nav>
   );
 }

@@ -1,13 +1,11 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { getPinnedProjectData } from "../lib/projects";
 import Card from "../components/card";
 import Showcase from "../components/showcase";
 import A from "../components/a";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Home({ allProjectData }) {
+export default function Home() {
   return (
     <>
       <Showcase>
@@ -18,59 +16,33 @@ export default function Home({ allProjectData }) {
           <title>Andrej Kenda</title>
         </Head>
         <section className={utilStyles.headingDescription}>
-          <h2 className={utilStyles.headingSubtitle}>Zanimanja</h2>
+          <h2 className={utilStyles.headingSubtitle}>Interests</h2>
           <ul>
+            <li>Shell Scripting</li>
+            <li>Embedded Systems</li>
+            <li>Distributed Systems & Iac</li>
+            <li>3D Modeling & 3D Printing</li>
             <li>Linux</li>
-            <li>Shell skripte</li>
-            <li>Embedded sistemi</li>
-            <li>IaC</li>
-            <li>Porazdeljeni sistemi</li>
-            <li>3D modeliranje</li>
-            <li>3D tisk</li>
-            <li>Načrtovanje vezij</li>
-            <li>Libre software</li>
-            <li>Custom tipkovnice</li>
+            <li>Libre Software</li>
+            <li>Custom Keyboards (& Mice)</li>
           </ul>
         </section>
         <section className={utilStyles.headingDescription}>
-          <h2 className={utilStyles.headingSubtitle}>Članki</h2>
+          <h2 className={utilStyles.headingSubtitle}>Articles</h2>
           <ul className={utilStyles.list}>
             <li className={utilStyles.listItem} key="erk1">
-              <p>Pregled programirljivih logičnih vezij vgrajenih v C2000 družino mikrokrmilnikov (ERK21)  <A href="https://erk.fe.uni-lj.si/2021/papers/kenda(pregled_programirljivih).pdf" blank={true}>Več</A></p>
+              <A href="https://erk.fe.uni-lj.si/2021/papers/kenda(pregled_programirljivih).pdf" blank={true}>
+                Texas Instruments C2000 Part 1 (sl)
+              </A>
             </li>
             <li className={utilStyles.listItem} key="erk2">
-              <p>Emulacija inkrementalnega dajalnika (ERK21)  <A href="https://erk.fe.uni-lj.si/2021/papers/kenda(emulacija_inkrementalnega).pdf" blank={true}>Več</A></p>
+              <A href="https://erk.fe.uni-lj.si/2021/papers/kenda(emulacija_inkrementalnega).pdf" blank={true}>
+                Texas Instruments C2000 Part 2 (sl)
+              </A>
             </li>
           </ul>
         </section>
-        {allProjectData.length != 0 && (
-          <section className={utilStyles.headingDescription}>
-            <h2 className={utilStyles.headingSubtitle}>Projekti</h2>
-            <small className={utilStyles.lightText}>
-              <A href="/projects"><FontAwesomeIcon icon={["fas", "hammer"]} />Vsi projekti</A>
-            </small>
-            <ul className={utilStyles.list}>
-              {allProjectData.map(({ id, description, title }) => (
-                <li className={utilStyles.listItem} key={id}>
-                  <h3 className={utilStyles.headingParagraphTitle}>{title}</h3>
-                  <small className={utilStyles.lightText}>
-                    <p>{description}</p>
-                  </small>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
       </Layout>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const allProjectData = getPinnedProjectData();
-  return {
-    props: {
-      allProjectData
-    }
-  };
 }

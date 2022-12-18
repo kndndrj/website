@@ -1,8 +1,7 @@
 import styles from "./navbar.module.css"
-import { motion } from "framer-motion"
 
 const Path = (props) => (
-  <motion.path
+  <path
     fill="transparent"
     strokeWidth="3"
     stroke="var(--color-primary)"
@@ -13,7 +12,7 @@ const Path = (props) => (
 
 export default function MenuToggle({ toggle }) {
   return (
-    <motion.button
+    <button
       whileHover={{ scale: 1.1 }}
       className={styles.burger}
       onClick={toggle}
@@ -40,6 +39,6 @@ export default function MenuToggle({ toggle }) {
           }}
         />
       </svg>
-    </motion.button>
+    </button>
   )
 };

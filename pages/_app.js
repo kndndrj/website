@@ -1,9 +1,4 @@
 import "../styles/global.css"
-import {
-  AnimatePresence,
-  motion
-} from "framer-motion"
-import { pageAnimation } from "../lib/transitions"
 import Navbar from "../components/navbar"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fas } from "@fortawesome/free-solid-svg-icons"
@@ -17,18 +12,9 @@ export default function App({ Component, pageProps, router }) {
       <header>
         <Navbar router={router} />
       </header>
-        <AnimatePresence exitBeforeEnter>
-          <motion.main
-            key={router.route.concat(pageAnimation.name)}
-            variants={pageAnimation}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={pageAnimation.transition}
-          >
+        <main>
             <Component {...pageProps} />
-          </motion.main>
-        </AnimatePresence>
+        </main>
     </>
   )
 }

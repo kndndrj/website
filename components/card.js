@@ -1,9 +1,8 @@
-import Image from "next/image"
-import styles from "./card.module.css"
-import utilStyles from "../styles/utils.module.css"
-import { motion } from "framer-motion"
-import A from "./a"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Image from "next/image";
+import styles from "./card.module.css";
+import utilStyles from "../styles/utils.module.css";
+import A from "./a";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const buttons = [
   { icon: ["fas", "graduation-cap"], label: "Diplomirani inženir strojništva (VS)", href: "https://repozitorij.uni-lj.si/IzpisGradiva.php?id=109420&lang=slv", blank: true },
@@ -13,10 +12,7 @@ const buttons = [
 
 export default function Card({ name }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.02 }}
-      className={styles.card}
-    >
+    <div className={styles.card} >
       <div className={`${utilStyles.sideImg} ${utilStyles.leftImg}`}>
         <Image
           className={styles.image}
@@ -32,10 +28,10 @@ export default function Card({ name }) {
       <ul className={utilStyles.list}>
         {buttons.map((button) => (
           <li key={button.label}>
-              <A href={button.href} blank={button.blank} ><FontAwesomeIcon icon={button.icon} />{button.label}</A>
+            <A href={button.href} blank={button.blank} ><FontAwesomeIcon icon={button.icon} />{button.label}</A>
           </li>
         ))}
       </ul>
-    </motion.div >
-  )
+    </div>
+  );
 }
