@@ -13,7 +13,6 @@ const Path = (props) => (
 export default function MenuToggle({ toggle }) {
   return (
     <button
-      whileHover={{ scale: 1.1 }}
       className={styles.burger}
       onClick={toggle}
     >

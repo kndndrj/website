@@ -3,8 +3,9 @@ import styles from "./card.module.css";
 import utilStyles from "../styles/utils.module.css";
 import A from "./a";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { PageButton } from "./navbar"
 
-const buttons = [
+const buttons: PageButton[] = [
   { icon: ["fas", "graduation-cap"], label: "Diplomirani inženir strojništva (VS)", href: "https://repozitorij.uni-lj.si/IzpisGradiva.php?id=109420&lang=slv", blank: true },
   { icon: ["fas", "graduation-cap"], label: "Študent 2. st. mehatronike UL FE", href: "/", blank: false },
   { icon: ["fas", "envelope"], label: "Kontakt", href: "mailto:andrej@kenda.one", blank: false },

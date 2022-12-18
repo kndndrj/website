@@ -1,7 +1,13 @@
 import styles from "./a.module.css";
 import Link from "next/link";
 
-export default function A({ children, href, blank }) {
+type AProps = {
+  children: React.ReactNode
+  href: string,
+  blank?: boolean,
+}
+
+export default function Tag({ children, href, blank }: AProps) {
   return (
     <div className={styles.linkButton}>
       <Link href={href}>

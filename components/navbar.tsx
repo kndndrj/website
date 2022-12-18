@@ -4,16 +4,29 @@ import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 import MenuToggle from "./menu_toggle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
+export type PageButton = {
+  icon: IconProp,
+  label: string,
+  href: string,
+  blank: boolean,
+}
 
-const pages = [
+const pages: PageButton[] = [
   { icon: ["fas", "address-card"], label: "O meni", href: "/", blank: false },
   { icon: ["fas", "hammer"], label: "Projekti", href: "/projects", blank: false },
   { icon: ["fab", "github"], label: "Github", href: "https://github.com/kndndrj", blank: true },
   { icon: ["fas", "house-user"], label: "Več", href: "https://kenda.one", blank: true },
 ];
 
-function NavButton({ children, href, blank }) {
+type NavButtonProps = {
+  children: any,
+  href: string,
+  blank: boolean,
+}
+
+function NavButton({ children, href, blank }: NavButtonProps) {
   return (
     <Link href={href}>
       {blank ? (

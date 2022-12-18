@@ -6,15 +6,15 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 
 library.add(fas, fab)
 
-export default function App({ Component, pageProps, router }) {
+export default function App({ Component, pageProps }) {
   return (
     <>
       <header>
-        <Navbar router={router} />
+        <Navbar />
       </header>
-        <main>
-            <Component {...pageProps} />
-        </main>
+      <main>
+        <Component {...pageProps} />
+      </main>
     </>
   )
 }

@@ -13,8 +13,9 @@ import rehypeStringify from 'rehype-stringify';
 const rawGithubUrl = "https://raw.githubusercontent.com/kndndrj/"
 const normalGithubUrl = "https://github.com/kndndrj/"
 
+
 export default function ProjectPage() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState("");
   const [isLoading, setLoading] = useState(false);
 
   const router = useRouter();

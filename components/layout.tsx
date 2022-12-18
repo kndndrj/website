@@ -3,7 +3,12 @@ import utilStyles from "../styles/utils.module.css"
 import A from "../components/a"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default function Layout({ children, home }) {
+type LayoutProps = {
+  children: any,
+  home?: boolean,
+}
+
+export default function Layout({ children, home }: LayoutProps) {
   return (
     <div className={utilStyles.container}>
       <Head>
@@ -12,7 +17,7 @@ export default function Layout({ children, home }) {
       </Head>
       <section className={utilStyles.mainSection}>
         {!home && (
-          <A href="/"><FontAwesomeIcon icon={["fas", "angle-left"]} />Nazaj</A>
+          <A href="/"><FontAwesomeIcon icon={["fas", "angle-left"]} />Back</A>
         )}
         {children}
       </section>

@@ -3,20 +3,15 @@
 }
 
 .linkButton a {
-  padding: 5px 7px;
-  color: var(--color-text-secondary);
-  background-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+  background-color: none;
   display: flex;
   text-decoration: none;
   text-align: center;
-  border-radius: 2px;
 }
 
-.linkButton svg {
-  padding: 0px 5px 0px 0px;
-  width: 24px;
-  margin: 0;
-  border: none;
+.linkButton a:hover {
+  text-decoration: underline;
 }
 
 .linkButton div {

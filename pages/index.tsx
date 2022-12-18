@@ -5,7 +5,7 @@ import Card from "../components/card";
 import Showcase from "../components/showcase";
 import A from "../components/a";
 
-export default function Home() {
+export default function IndexPage() {
   return (
     <>
       <Showcase>
