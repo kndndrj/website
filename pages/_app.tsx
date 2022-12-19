@@ -9,9 +9,6 @@ library.add(fas, fab)
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
       <main>
         <Component {...pageProps} />
       </main>

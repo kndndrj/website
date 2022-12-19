@@ -13,26 +13,29 @@ const buttons: PageButton[] = [
 
 export default function Card({ name }) {
   return (
+      <div className={styles.centered}>
     <div className={styles.card} >
-      <div className={`${utilStyles.sideImg} ${utilStyles.leftImg}`}>
-        <Image
-          className={styles.image}
-          src="/images/profile.jpg"
-          height={350}
-          width={350}
-          alt={name}
-        />
+        <div className={styles.left}>
+          <Image
+            className={styles.image}
+            src="/images/profile.jpg"
+            height={350}
+            width={350}
+            alt={name}
+          />
+        </div>
+
+        <div className={styles.right}>
+          <h1 className={utilStyles.headingTitle}>{name}</h1>
+          <ul className={utilStyles.list}>
+            {buttons.map((button) => (
+              <li key={button.label}>
+                <A href={button.href} blank={button.blank} ><FontAwesomeIcon icon={button.icon} />{button.label}</A>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-
-      <h1 className={utilStyles.headingTitle}>{name}</h1>
-
-      <ul className={utilStyles.list}>
-        {buttons.map((button) => (
-          <li key={button.label}>
-            <A href={button.href} blank={button.blank} ><FontAwesomeIcon icon={button.icon} />{button.label}</A>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }

@@ -1,14 +1,19 @@
 .card {
-  width: 100%;
   text-align: center;
-  background-color: var(--color-primary);
   border: 0px solid;
-  border-radius: 20px;
+  margin-top: 50px;
   display: inline-block;
+  align-items: center;
+  width: 90%;
 }
 
 .image {
   border-radius: 17px;
+}
+
+.card ul {
+  margin: 10px;
+  width: 100%;
 }
 
 .card li {
@@ -19,10 +24,39 @@
   width: 100%;
 }
 
+.right {
+  border-top: 1px solid var(--color-text-primary);
+  margin-top: 30px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+
+
 @media (min-width: 900px) {
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+    border-left: 1px solid var(--color-text-primary);
+    border-top: none;
+    margin-left: 30px;
+  }
+
   .card li {
-    width: 50%;
     margin: 0;
-    justify-content: left;
+    display: block;
+    text-align: left;
+  }
+  .card {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
   }
 }
