@@ -4,7 +4,9 @@ import utilStyles from "../styles/utils.module.css";
 import Card from "../components/card";
 import Showcase from "../components/showcase";
 
+
 export default function IndexPage() {
+
   return (
     <>
       <Showcase />

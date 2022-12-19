@@ -45,6 +45,7 @@
     border-left: 1px solid var(--color-text-primary);
     border-top: none;
     margin-left: 30px;
+    padding-left: 20px;
   }
 
   .card li {
@@ -53,6 +54,7 @@
     text-align: left;
   }
   .card {
+    margin-top: 0;
     display: flex;
     position: fixed;
     top: 50%;

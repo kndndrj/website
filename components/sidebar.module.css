@@ -1,0 +1,50 @@
+
+.sidebar {
+  position: fixed;
+  transition: all 0.25s;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  top: 0;
+  padding-top: 40px;
+  background-color: lightblue;
+  overflow:auto;
+}
+
+.item {
+  padding: 40px;
+  font-size: 14px;
+  display: block;
+}
+
+.button {
+  cursor: pointer;
+  background-color: var(--color-text-primary);
+  border: none;
+  border-radius: 100%;
+  color: var(--color-text-secondary);
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 10px;
+}
+.button svg {
+  width: 50px;
+  height: 50px;
+}
+
+.hide {
+    margin-right: -100%;
+}
+
+@media (min-width: 900px) {
+  .sidebar {
+    width: 80%;
+  }
+  .hide {
+    margin-right: -80%;
+  }
+
+}

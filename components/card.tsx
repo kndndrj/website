@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PageButton } from "./navbar"
 
 const buttons: PageButton[] = [
-  { icon: ["fas", "graduation-cap"], label: "Diplomirani inženir strojništva (VS)", href: "https://repozitorij.uni-lj.si/IzpisGradiva.php?id=109420&lang=slv", blank: true },
-  { icon: ["fas", "graduation-cap"], label: "Študent 2. st. mehatronike UL FE", href: "/", blank: false },
-  { icon: ["fas", "envelope"], label: "Kontakt", href: "mailto:andrej@kenda.one", blank: false },
+  { icon: ["fas", "graduation-cap"], label: "Projects", href: "/projects", blank: true },
+  { icon: ["fas", "graduation-cap"], label: "Education", href: "/", blank: false },
+  { icon: ["fas", "envelope"], label: "Contact", href: "mailto:andrej@kenda.one", blank: false },
 ];
 
 export default function Card({ name }) {
@@ -30,7 +30,7 @@ export default function Card({ name }) {
           <ul className={utilStyles.list}>
             {buttons.map((button) => (
               <li key={button.label}>
-                <A href={button.href} blank={button.blank} ><FontAwesomeIcon icon={button.icon} />{button.label}</A>
+                <A href={button.href} blank={button.blank} >{button.label}</A>
               </li>
             ))}
           </ul>

@@ -26,7 +26,9 @@ body {
 
 code {
   font-family: 'Source Code Pro', monospace;
-  display: block;
+  background-color: gray;
+  padding: 1px;
+  border-radius: 5px;
 }
 
 pre {
@@ -36,6 +38,10 @@ pre {
   padding: 20px;
   border: 0px solid;
   border-radius: 7px;
+  background-color: var(--color-text-secondary)
+}
+
+pre code {
   background-color: var(--color-text-secondary)
 }
 
