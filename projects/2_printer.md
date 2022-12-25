@@ -6,7 +6,6 @@ pinned: "true"
 ---
 
 ![3D printer](https://raw.githubusercontent.com/kndndrj/renew3d/master/images/photo_1.jpg)
-![3D printer](https://raw.githubusercontent.com/kndndrj/renew3d/master/images/photo_2.jpg)
 
 3D Tiskalnik s poceni komponentami, dostopnimi po vsem svetu. Veliko kosov je
 dostopnih na AliExpressu, nekaj večjih delov pa je lažje kupiti drugje. Veliko

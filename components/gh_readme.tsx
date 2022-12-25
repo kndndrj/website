@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 import styles from "./gh_readme.module.css";
 
-import * as DOMPurify from 'dompurify';
-
 import { marked } from 'marked'
+import * as DOMPurify from 'dompurify';
 
 const rawGithubUrl = "https://raw.githubusercontent.com/kndndrj/"
 const normalGithubUrl = "https://github.com/kndndrj/"
 
-async function getReadmeHTML(name: string) {
+async function getReadmeHTML(name: string): Promise<string> {
+
+  if (!name) {
+    return ""
+  }
 
   const res = await fetch(rawGithubUrl + name + '/master/README.md')
 
@@ -55,11 +58,11 @@ export default function GHReadme({ id }) {
   if (isLoading) {
     body = <p>Loading...</p>;
   } else if (data) {
-    body = <div className={styles.markdownContents} dangerouslySetInnerHTML={{ __html: data }} />;
+    body = <div className={styles.markdown} dangerouslySetInnerHTML={{ __html: data }} />;
   }
 
   return (
-    <section className={styles.markdown}>
+    <section>
       {body}
     </section>
   );

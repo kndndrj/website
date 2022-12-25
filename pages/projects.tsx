@@ -2,6 +2,7 @@ import Layout from "../components/layout"
 import { getAllProjectIds, getProjectData, ProjectData } from "../lib/projects"
 import Head from "next/head"
 import utilStyles from "../styles/utils.module.css"
+import styles from "../styles/projects.module.css"
 import SideBar from "../components/sidebar"
 import GHReadme from "../components/gh_readme"
 import { useState } from "react";
@@ -13,7 +14,7 @@ type ProjectsPageProps = {
 export default function Projects({ contents }: ProjectsPageProps) {
 
   const [isOpen, setOpen] = useState(false)
-  // github repo id
+  // github repo id (name)
   const [ghId, setGhId] = useState("")
 
   return (
@@ -21,15 +22,17 @@ export default function Projects({ contents }: ProjectsPageProps) {
       <Head>
         <title>Projects</title>
       </Head>
-      <section className={utilStyles.markdown}>
+      <section>
         {contents.map(({ id, title, contentHtml }) => (
-          <article id={id} key={id}>
+          <div key={id}>
             <h2 className={utilStyles.headingSubtitle}>
               {title}
+              <button className={styles.button} onClick={() => { setOpen(!isOpen); setGhId(title) }}>More</button>
             </h2>
-            <button onClick={() => { setOpen(!isOpen); setGhId(title) }}>More</button>
-            <div className={utilStyles.markdownHtmlContents} dangerouslySetInnerHTML={{ __html: contentHtml }} />
-          </article>
+            <article id={id}>
+              <div className={styles.markdown} dangerouslySetInnerHTML={{ __html: contentHtml }} />
+            </article>
+          </div>
         ))}
       </section>
 

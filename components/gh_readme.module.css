@@ -4,31 +4,31 @@
   border-radius: 7px;
 }
 
-.markdownContents {
+.markdown {
   display: inline-block;
   max-width: 100%;
 }
 
-.markdownContents h1 {
+.markdown h1 {
   font-size: 24px;
 }
 
-.markdownContents h2 {
+.markdown h2 {
   font-size: 20px;
 }
 
-.markdownContents h3 {
+.markdown h3 {
   font-size: 16px;
 }
 
-.markdownContents code {
+.markdown code {
   font-family: 'Source Code Pro', monospace;
   background-color: gray;
   padding: 1px;
   border-radius: 5px;
 }
 
-.markdownContents pre {
+.markdown pre {
   margin: 0px;
   margin-top: 20px;
   overflow: auto;
@@ -38,6 +38,6 @@
   background-color: var(--color-text-secondary)
 }
 
-.markdownContents pre code {
+.markdown pre code {
   background-color: var(--color-text-secondary)
 }

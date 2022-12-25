@@ -49,13 +49,8 @@ export default function Navbar() {
     <nav className={styles.header}>
       <div className={utilStyles.container}>
         <div className={styles.navbar}>
+          <MenuToggle />
           <ul className={styles.list}>
-            <li
-              className={styles.tab}
-              key="burger"
-            >
-              <MenuToggle />
-            </li>
             {pages.map((page) => (
               <li
                 className={`${styles.tab} ${page.href === router.route && styles.selected}`}
