@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PageButton } from "./navbar"
 
 const buttons: PageButton[] = [
-  { icon: ["fas", "graduation-cap"], label: "Projects", href: "/projects", blank: true },
+  { icon: ["fas", "graduation-cap"], label: "Projects", href: "/projects", blank: false },
   { icon: ["fas", "graduation-cap"], label: "Education", href: "/", blank: false },
   { icon: ["fas", "envelope"], label: "Contact", href: "mailto:andrej@kenda.one", blank: false },
 ];

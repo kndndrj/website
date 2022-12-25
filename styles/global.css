@@ -24,7 +24,7 @@ body {
   font-size: 14px;
 }
 
-code {
+/* code {
   font-family: 'Source Code Pro', monospace;
   background-color: gray;
   padding: 1px;
@@ -43,7 +43,7 @@ pre {
 
 pre code {
   background-color: var(--color-text-secondary)
-}
+} */
 
 header {
   display: flex;
@@ -55,8 +55,8 @@ header {
   box-sizing: border-box;
 }
 
-a {
+/* a {
   color: var(--color-text-secondary);
   text-decoration: none;
   border: none;
-}
+} */
