@@ -1,7 +1,6 @@
 import Head from "next/head"
 import utilStyles from "../styles/utils.module.css"
 import A from "../components/a"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Navbar from "./navbar"
 
 type LayoutProps = {
@@ -23,7 +22,7 @@ export default function Layout({ children, home }: LayoutProps) {
       )}
       <section className={utilStyles.mainSection}>
         {home || (
-          <A href="/"><FontAwesomeIcon icon={["fas", "angle-left"]} />Back</A>
+          <A href="/">Back</A>
         )}
         {children}
       </section>

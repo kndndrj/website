@@ -2,23 +2,8 @@ import styles from "./navbar.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
-import MenuToggle from "./menu_toggle";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-
-export type PageButton = {
-  icon: IconProp,
-  label: string,
-  href: string,
-  blank: boolean,
-}
-
-const pages: PageButton[] = [
-  { icon: ["fas", "address-card"], label: "O meni", href: "/", blank: false },
-  { icon: ["fas", "hammer"], label: "Projekti", href: "/projects", blank: false },
-  { icon: ["fab", "github"], label: "Github", href: "https://github.com/kndndrj", blank: true },
-  { icon: ["fas", "house-user"], label: "Več", href: "https://kenda.one", blank: true },
-];
+import { buttons } from "../lib/navigation"
+import { useState } from "react";
 
 type NavButtonProps = {
   children: any,
@@ -45,23 +30,41 @@ function NavButton({ children, href, blank }: NavButtonProps) {
 export default function Navbar() {
   const router = useRouter();
 
+  const [visible, setVisible] = useState(false);
+
   return (
-    <nav className={styles.header}>
-      <div className={utilStyles.container}>
-        <div className={styles.navbar}>
-          <MenuToggle />
-          <ul className={styles.list}>
-            {pages.map((page) => (
-              <li
-                className={`${styles.tab} ${page.href === router.route && styles.selected}`}
-                key={page.label}
-              >
-                <NavButton href={page.href} blank={page.blank}><FontAwesomeIcon icon={page.icon} className={styles.icon} />{page.label}</NavButton>
-              </li>
-            ))}
-          </ul>
+    <>
+      <button className={`${styles.button} ${styles.toggle}`} onClick={() => setVisible(!visible)}>
+        a
+      </button>
+
+      <nav className={`${visible || styles.hide} ${styles.header}`}>
+        <div className={utilStyles.container}>
+          <div className={styles.navbar}>
+
+            <button className={styles.button} onClick={() => setVisible(!visible)}>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" fill="white"></path> </svg>
+            </button>
+
+            <ul className={styles.list}>
+              {buttons.map((button) => (
+                <li
+                  className={`${styles.tab} ${button.href == router.route && styles.selected}`}
+                  key={button.label}
+                >
+                  <NavButton
+                    href={button.href}
+                    blank={button.blank}
+                  >
+                    {button.label}
+                  </NavButton>
+                </li>
+              ))}
+            </ul>
+
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }

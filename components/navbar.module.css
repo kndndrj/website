@@ -4,6 +4,7 @@
 }
 
 .header {
+  transition: all 0.25s;
   width: 100%;
   height: 53px;
   background-color: var(--color-background-light);
@@ -43,18 +44,51 @@
   padding: 0px 5px 5px 5px;
 }
 
-.burger {
-  height: 100%;
-  height: 50px;
-  padding: 14px 20px;
+.button {
   cursor: pointer;
-  color: var(--color-text-secondary);
-  background: transparent;
-  outline: none;
+  background-color: var(--color-text-primary);
   border: none;
+  border-radius: 100%;
+  color: var(--color-text-secondary);
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
-@media (min-width: 55em) {
+.button .icon {
+  padding: 10px;
+}
+
+
+.toggle {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.button svg {
+  width: 50px;
+  height: 50px;
+}
+
+.hide {
+  margin-top: -100%;
+}
+
+@media (min-width: 900px) {
+  .hide {
+    margin-top: 0%;
+  }
+  .button {
+    display: none;
+  }
+
   .tab {
     margin: 0;
     padding: 0;

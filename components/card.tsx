@@ -2,19 +2,15 @@ import Image from "next/image";
 import styles from "./card.module.css";
 import utilStyles from "../styles/utils.module.css";
 import A from "./a";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { PageButton } from "./navbar"
-
-const buttons: PageButton[] = [
-  { icon: ["fas", "graduation-cap"], label: "Projects", href: "/projects", blank: false },
-  { icon: ["fas", "graduation-cap"], label: "Education", href: "/", blank: false },
-  { icon: ["fas", "envelope"], label: "Contact", href: "mailto:andrej@kenda.one", blank: false },
-];
+import { buttons } from "../lib/navigation"
+import { useRouter } from "next/router";
 
 export default function Card({ name }) {
+  const router = useRouter()
+
   return (
-      <div className={styles.centered}>
-    <div className={styles.card} >
+    <div className={styles.centered}>
+      <div className={styles.card} >
         <div className={styles.left}>
           <Image
             className={styles.image}
@@ -29,9 +25,11 @@ export default function Card({ name }) {
           <h1 className={utilStyles.headingTitle}>{name}</h1>
           <ul className={utilStyles.list}>
             {buttons.map((button) => (
-              <li key={button.label}>
-                <A href={button.href} blank={button.blank} >{button.label}</A>
-              </li>
+              button.href == router.route || (
+                <li key={button.label}>
+                  <A href={button.href} blank={button.blank} >{button.label}</A>
+                </li>
+              )
             ))}
           </ul>
         </div>
