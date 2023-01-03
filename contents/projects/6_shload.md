@@ -1,8 +1,6 @@
 ---
 title: "shload"
-description: "Preprosta nalagalna vrstica za vsakdanji shell script."
 url: "https://github.com/kndndrj/shload"
-pinned: "true"
 ---
 
 ![shload](/images/shload.gif)

@@ -1,6 +1,5 @@
 ---
 title: "website"
-description: "Spletna stran v next.js framework-u."
 url: "https://github.com/kndndrj/website"
 ---
 

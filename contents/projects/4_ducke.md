@@ -1,8 +1,6 @@
 ---
 title: "ducke"
-description: "Igrica, izdelana s programskim jezikom lua, ki se izvaja v vsakem UNIX terminalu."
 url: "https://github.com/kndndrj/ducke"
-pinned: "true"
 ---
 ```
      (_)     :     (_)       :    (_)   :

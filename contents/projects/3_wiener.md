@@ -1,6 +1,5 @@
 ---
 title: "wiener"
-description: "Shell script za nalaganje Wine programov."
 url: "https://github.com/kndndrj/wiener"
 ---
 

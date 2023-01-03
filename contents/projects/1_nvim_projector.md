@@ -1,8 +1,6 @@
 ---
 title: "nvim-projector"
-description: "Plugin za Neovim, ki omogoča preprosto konfiguracijo, specifično za projekt. "
 url: "https://github.com/kndndrj/nvim-projector"
-pinned: "true"
 ---
 
 Kot vsak novejši Neovim plugin je tudi ta napisan v lui. Osnovni princip

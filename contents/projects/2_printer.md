@@ -1,8 +1,6 @@
 ---
 title: "renew3d"
-description: "Preprost in zanesljiv 3D tiskalnik."
 url: "https://github.com/kndndrj/renew3d"
-pinned: "true"
 ---
 
 ![3D printer](https://raw.githubusercontent.com/kndndrj/renew3d/master/images/photo_1.jpg)

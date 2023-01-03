@@ -1,9 +1,6 @@
 import Layout from "../components/layout"
 import { getContents, MarkdownData, ContentType } from "../lib/contents"
 import Head from "next/head"
-import SideBar from "../components/sidebar"
-import GHReadme from "../components/gh_readme"
-import { useState } from "react";
 import Md from "../components/md";
 
 type ProjectsPageProps = {
@@ -11,32 +8,23 @@ type ProjectsPageProps = {
 }
 
 export default function Projects({ contents }: ProjectsPageProps) {
-
-  const [isOpen, setOpen] = useState(false)
-  // github repo id (name)
-  const [ghId, setGhId] = useState("")
-
   return (
     <Layout>
       <Head>
-        <title>Projects</title>
+        <title>Work</title>
       </Head>
       <section>
         {contents.map((project) => (
-          <Md key={project.id} markdown={project} buttonFunc={() => { setOpen(!isOpen); setGhId(project.title) }} />
+          <Md key={project.id} markdown={project} />
         ))}
       </section>
-
-      <SideBar visible={isOpen} setVisible={setOpen}>
-        <GHReadme id={ghId} />
-      </SideBar>
 
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  const contents = await getContents(ContentType.Projects)
+  const contents = await getContents(ContentType.Work)
 
   return {
     props: {

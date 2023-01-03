@@ -1,6 +1,5 @@
 ---
 title: "baby-arch"
-description: "Preprost aktivnostni lok za dojenčke. "
 url: "https://github.com/kndndrj/baby-arch"
 ---
 
