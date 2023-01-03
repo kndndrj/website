@@ -16,6 +16,7 @@
   border-color: var(--color-text-primary);
   border-radius: 6px;
   float: right;
+  padding: 0px 5px;
 }
 
 .markdown {
