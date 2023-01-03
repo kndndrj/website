@@ -1,6 +1,8 @@
 ---
-title: "Work"
-url: "https://github.com/kndndrj/nvim-projector"
+title: "Backend Software Engineer"
+url: ""
 ---
 
-Yes, I do work
+I work on the backend, mainly using go and (to some extent) python.
+
+Also using kubernetes, docker and other distributed systems related tools/services.

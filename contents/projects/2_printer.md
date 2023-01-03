@@ -5,12 +5,8 @@ url: "https://github.com/kndndrj/renew3d"
 
 ![3D printer](https://raw.githubusercontent.com/kndndrj/renew3d/master/images/photo_1.jpg)
 
-3D Tiskalnik s poceni komponentami, dostopnimi po vsem svetu. Veliko kosov je
-dostopnih na AliExpressu, nekaj večjih delov pa je lažje kupiti drugje. Veliko
-namenskih komponent je 3D tiskanih, za njihovo oblikovanje sem uporabil Fusion
-360.
+A simple 3D printer made with common and cheap parts. During my many years of playing around with
+printers, I settled on something clean, simple and reliable.
 
-V "showcase" verziji je uporabljen ATX napajalnik, za krmiljenje pa poskrbi
-ploščica RAMPS 1.4. Ker pa je vse odprto in dostopno na git-u, lahko vsak, ki
-ima v projektu interes enostavno prilagodi tiskane komponente za drugačen
-krmilnik, napajalnik ali drugo šobo.
+I want it to sit in the basement and be ready to print in a few minutes,
+without needing to spend too much time configuring parameters

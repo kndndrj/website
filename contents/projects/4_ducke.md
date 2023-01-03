@@ -10,9 +10,4 @@ url: "https://github.com/kndndrj/ducke"
 ~~~~~~~~~~~~~~~\___)~~~~~~~~~~~~~~~~~~~~~~
    ~    ~    ~    ~  ~     ~       ~    ~
 ```
-Igrica, izdelana s programskim jezikom "Lua", ki se izvaja v vsakem UNIX
-terminalu. Igrica je izdelana v stilu ASCII art, vsi predmeti v igri so zgolj
-črke oz. številke. Celotna mehanika igre temelji na postavitvi karte, to lahko
-spremenimo kakorkoli hočemo. Paziti je treba le na nekaj posebnih znakov, ki
-predstavljajo različne ovire oz. "naloge". Če želiš izvedeti več, si poglej
-projekt na mojem GitHubu!
+A TUI game where you play as a duck. I made it in a process of learning lua.

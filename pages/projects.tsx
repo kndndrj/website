@@ -22,8 +22,8 @@ export default function Projects({ contents }: ProjectsPageProps) {
         <title>Projects</title>
       </Head>
       <section>
-        {contents.map((project) => (
-          <Md key={project.id} markdown={project} buttonFunc={() => { setOpen(!isOpen); setGhId(project.title) }} />
+        {contents.map((content) => (
+          <Md key={content.id} markdown={content} buttonFunc={() => { setOpen(!isOpen); setGhId(content.title) }} />
         ))}
       </section>
 

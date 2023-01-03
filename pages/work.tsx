@@ -14,8 +14,8 @@ export default function Projects({ contents }: ProjectsPageProps) {
         <title>Work</title>
       </Head>
       <section>
-        {contents.map((project) => (
-          <Md key={project.id} markdown={project} />
+        {contents.map((content) => (
+          <Md key={content.id} markdown={content} />
         ))}
       </section>
 

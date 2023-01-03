@@ -24,6 +24,12 @@
   max-width: 100%;
 }
 
+.markdown a {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  padding: 0px 3px;
+}
+
 .markdown code {
   font-family: 'Source Code Pro', monospace;
   background-color: gray;

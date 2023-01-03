@@ -14,8 +14,14 @@ export default function Projects({ contents }: ProjectsPageProps) {
         <title>Work</title>
       </Head>
       <section>
-        {contents.map((project) => (
-          <Md key={project.id} markdown={project} />
+        {contents.map((content) => (
+          <>
+            {content.url ? (
+              <Md key={content.id} markdown={content} buttonFunc={() => { window.open(content.url, "_blank") }} />
+            ) : (
+              <Md key={content.id} markdown={content} />
+            )}
+          </>
         ))}
       </section>
 
