@@ -3,68 +3,59 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 import { buttons } from "../lib/navigation"
-import { useState } from "react";
-
-type NavButtonProps = {
-  children: any,
-  href: string,
-  blank: boolean,
-}
-
-function NavButton({ children, href, blank }: NavButtonProps) {
-  return (
-    <Link href={href}>
-      {blank ? (
-        <a href={href} target="_blank" rel="noreferrer">
-          {children}
-        </a>
-      ) : (
-        <a href={href} >
-          {children}
-        </a>
-      )}
-    </Link>
-  );
-}
+import { useState, useRef, useEffect } from "react";
 
 export default function Navbar() {
-  const router = useRouter();
+  const router = useRouter()
+
+  const ref = useRef(null);
 
   const [visible, setVisible] = useState(false);
 
+  useEffect(() => {
+    const handleClickOutside = (event: Event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setVisible(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside, true);
+  }, [visible]);
+
   return (
-    <>
-      <button className={`${styles.button} ${styles.toggle}`} onClick={() => setVisible(!visible)}>
-        a
-      </button>
+    <nav ref={ref} className={styles.header}>
+      <div className={utilStyles.container}>
+        <div className={styles.navbar}>
 
-      <nav className={`${visible || styles.hide} ${styles.header}`}>
-        <div className={utilStyles.container}>
-          <div className={styles.navbar}>
+          {/* toggle */}
+          <button className={`${styles.button} ${styles.toggle}`} onClick={() => setVisible(!visible)}>
+            {visible ? (
+              <>close</>
+            ) : (
+              <>open</>
+            )}
+          </button>
 
-            <button className={styles.button} onClick={() => setVisible(!visible)}>
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" fill="white"></path> </svg>
-            </button>
+          {/* menu */}
+          <ul className={`${visible || styles.hide} ${styles.menu}`}>
+            {buttons.map((button) => (
+              <li key={button.label}>
+                <Link href={button.href}>
+                  {button.blank ? (
+                    <a className={`${styles.button} ${button.href == router.route && styles.selected}`} href={button.href} target="_blank" rel="noreferrer">
+                      {button.label}
+                    </a>
+                  ) : (
+                    <a className={`${styles.button} ${button.href == router.route && styles.selected}`} href={button.href} >
+                      {button.label}
+                    </a>
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-            <ul className={styles.list}>
-              {buttons.map((button) => (
-                <li
-                  className={`${styles.tab} ${button.href == router.route && styles.selected}`}
-                  key={button.label}
-                >
-                  <NavButton
-                    href={button.href}
-                    blank={button.blank}
-                  >
-                    {button.label}
-                  </NavButton>
-                </li>
-              ))}
-            </ul>
-
-          </div>
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 }

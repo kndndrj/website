@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import Card from "../components/card";
-import Showcase from "../components/showcase";
-
 
 export default function IndexPage() {
 

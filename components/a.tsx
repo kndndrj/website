@@ -7,12 +7,12 @@ type AProps = {
   blank?: boolean,
 }
 
-export default function Tag({ children, href, blank }: AProps) {
+export default function A({ children, href, blank }: AProps) {
   return (
     <div className={styles.linkButton}>
       <Link href={href}>
         {blank ? (
-          <a target="_blank">
+          <a target="_blank" rel="noreferrer">
             <div>{children}</div>
           </a>
         ) : (
