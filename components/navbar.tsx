@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 import { buttons } from "../lib/navigation"
 import { useState, useRef, useEffect } from "react";
+import MenuToggle from "./menu_toggle"
 
 export default function Navbar() {
   const router = useRouter()
@@ -29,9 +30,9 @@ export default function Navbar() {
           {/* toggle */}
           <button className={`${styles.button} ${styles.toggle}`} onClick={() => setVisible(!visible)}>
             {visible ? (
-              <>close</>
+              <MenuToggle open={false} />
             ) : (
-              <>open</>
+              <MenuToggle open={true} />
             )}
           </button>
 
