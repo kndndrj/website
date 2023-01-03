@@ -15,13 +15,11 @@ export default function Education({ contents }: ProjectsPageProps) {
       </Head>
       <section>
         {contents.map((content) => (
-          <>
-            {content.url ? (
+            content.url ? (
               <Md key={content.id} markdown={content} buttonFunc={() => { window.open(content.url, "_blank") }} />
             ) : (
               <Md key={content.id} markdown={content} />
-            )}
-          </>
+            )
         ))}
       </section>
     </Layout>

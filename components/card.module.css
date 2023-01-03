@@ -44,6 +44,20 @@
   text-decoration: underline;
 }
 
+.title {
+  font-size: 2em;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  margin: 1rem 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 @media (min-width: 900px) {
   .left {
     float: left;

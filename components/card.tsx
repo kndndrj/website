@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./card.module.css";
-import utilStyles from "../styles/utils.module.css";
 import { buttons } from "../lib/navigation"
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -22,8 +21,8 @@ export default function Card({ name }) {
         </div>
 
         <div className={styles.right}>
-          <h1 className={utilStyles.headingTitle}>{name}</h1>
-          <ul className={utilStyles.list}>
+          <h1 className={styles.title}>{name}</h1>
+          <ul className={styles.list}>
             {buttons.map((button) => (
               button.href == router.route || (
                 <li key={button.label}>
