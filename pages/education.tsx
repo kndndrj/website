@@ -7,11 +7,11 @@ type ProjectsPageProps = {
   contents: MarkdownData[]
 }
 
-export default function Projects({ contents }: ProjectsPageProps) {
+export default function Education({ contents }: ProjectsPageProps) {
   return (
     <Layout>
       <Head>
-        <title>Work</title>
+        <title>Education</title>
       </Head>
       <section>
         {contents.map((content) => (
@@ -24,7 +24,6 @@ export default function Projects({ contents }: ProjectsPageProps) {
           </>
         ))}
       </section>
-
     </Layout>
   )
 }

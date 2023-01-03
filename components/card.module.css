@@ -34,7 +34,15 @@
   justify-content: center;
 }
 
+.button {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  text-align: center;
+}
 
+.button:hover {
+  text-decoration: underline;
+}
 
 @media (min-width: 900px) {
   .left {

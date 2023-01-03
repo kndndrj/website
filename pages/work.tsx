@@ -7,7 +7,7 @@ type ProjectsPageProps = {
   contents: MarkdownData[]
 }
 
-export default function Projects({ contents }: ProjectsPageProps) {
+export default function Work({ contents }: ProjectsPageProps) {
   return (
     <Layout>
       <Head>
@@ -18,7 +18,6 @@ export default function Projects({ contents }: ProjectsPageProps) {
           <Md key={content.id} markdown={content} />
         ))}
       </section>
-
     </Layout>
   )
 }

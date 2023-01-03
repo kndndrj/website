@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "./card.module.css";
 import utilStyles from "../styles/utils.module.css";
-import A from "./a";
 import { buttons } from "../lib/navigation"
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Card({ name }) {
   const router = useRouter()
@@ -27,7 +27,17 @@ export default function Card({ name }) {
             {buttons.map((button) => (
               button.href == router.route || (
                 <li key={button.label}>
-                  <A href={button.href} blank={button.blank} >{button.label}</A>
+                  <Link href={button.href}>
+                    {button.blank ? (
+                      <a className={styles.button} target="_blank" rel="noreferrer">
+                        {button.label}
+                      </a>
+                    ) : (
+                      <a className={styles.button}>
+                        {button.label}
+                      </a>
+                    )}
+                  </Link>
                 </li>
               )
             ))}
