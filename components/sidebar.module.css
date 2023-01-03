@@ -5,9 +5,19 @@
   width: 100%;
   right: 0;
   top: 0;
-  background-color: lightblue;
-  overflow:auto;
+  background-color: var(--color-background-light);
+  overflow: auto;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
 
 .body {
   padding-top: 100px;
@@ -17,7 +27,7 @@
   width: 100%;
   padding-top: 60px;
   height: 130px;
-  background-color: lightblue;
+  background-color: inherit;
   position: fixed;
   z-index: 1;
 }
@@ -56,6 +66,7 @@
 @media (min-width: 900px) {
   .sidebar {
     width: 60%;
+    border-left: 3px solid var(--color-primary);
   }
   .hide {
     margin-right: -60%;

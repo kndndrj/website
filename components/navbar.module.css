@@ -34,7 +34,10 @@
   text-decoration: none;
 }
 
-.button:hover,
+.button:hover {
+  text-decoration: underline;
+}
+
 .selected {
   color: var(--color-text-secondary);
   background-color: var(--color-primary);
