@@ -1,6 +1,5 @@
 import Head from "next/head"
 import utilStyles from "../styles/utils.module.css"
-import A from "../components/a"
 import Navbar from "./navbar"
 
 type LayoutProps = {
@@ -21,9 +20,6 @@ export default function Layout({ children, home }: LayoutProps) {
         </header>
       )}
       <section className={utilStyles.mainSection}>
-        {home || (
-          <A href="/">Back</A>
-        )}
         {children}
       </section>
     </div>

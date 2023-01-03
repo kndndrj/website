@@ -5,9 +5,21 @@
   width: 100%;
   right: 0;
   top: 0;
-  padding-top: 60px;
   background-color: lightblue;
   overflow:auto;
+}
+
+.body {
+  padding-top: 100px;
+}
+
+.header {
+  width: 100%;
+  padding-top: 60px;
+  height: 130px;
+  background-color: lightblue;
+  position: fixed;
+  z-index: 1;
 }
 
 .item {
