@@ -22,7 +22,6 @@ export default function Card({ name }) {
 
         <div className={styles.right}>
           <h1 className={styles.title}>{name}</h1>
-          <ul className={styles.list}>
             {buttons.map((button) => (
               button.href == router.route || (
                 <li key={button.label}>
@@ -40,7 +39,6 @@ export default function Card({ name }) {
                 </li>
               )
             ))}
-          </ul>
         </div>
       </div>
     </div>

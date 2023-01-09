@@ -33,7 +33,7 @@
 }
 
 .item {
-  padding: 40px;
+  padding: 20px;
   font-size: 14px;
   display: block;
   max-width: 900px;
@@ -58,11 +58,11 @@
 
 @media (min-width: 900px) {
   .sidebar {
-    width: 60%;
+    width: 80%;
     border-left: 3px solid var(--color-primary);
   }
   .hide {
-    margin-right: -60%;
+    margin-right: -80%;
   }
 
 }
